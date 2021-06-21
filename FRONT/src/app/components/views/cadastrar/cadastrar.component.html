@@ -1,0 +1,25 @@
+<mat-card class="container">
+    <mat-card-header style="display: flex; flex-direction: column; align-items: center;">
+        <mat-card-title>Cadastrar Livro</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form">
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Nome do Livro:" type="text" name="nomeLivro" [(ngModel)]="livro.nome" formControlName="nome" required>
+            <mat-error>O campo NOME é obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="ISBN:" type="number" name="nomeLivro" [(ngModel)]="livro.isbn" formControlName="isbn" required>
+            <mat-error>O campo ISBN é obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Preço:" type="number" min="1" name="nomeLivro" [(ngModel)]="livro.preco" formControlName="preco" required>
+            <mat-error>O campo PREÇO é obrigatório</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+        <button mat-flat-button color="accent" routerLink="/livros/listar" style="margin-top: 12px;">Listar Livros</button>
+    </form>
+</mat-card>

@@ -1,0 +1,19 @@
+::ng-deep body{
+    background-color: aqua !important;
+}
+
+.container{
+    background: rgba(255,255,255,.70);
+    width: 400px;
+    height: 302px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
